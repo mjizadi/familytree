@@ -1,14 +1,27 @@
 import React, {Component} from 'react';
-import FontAwesome from 'react-fontawesome';
+import './Person.css';
+import PersonBox from './PersonBox';
 
 class Person extends Component {
     render() {
         return (
-            <div>
-                <FontAwesome
-                    name={this.props.male ? "male" : "female"}
+            <div className="coupleBox">
+
+                <PersonBox
+                        firstName={this.props.firstName}
+                        lastName={this.props.lastName}
+                        nickname={this.props.nickname}
+                        male={this.props.male}
                 />
-                {this.props.firstName + ' ' + this.props.lastName}
+                {
+                    this.props.spouse &&
+                    <PersonBox
+                        firstName={this.props.spouse.firstName}
+                        lastName={this.props.spouse.lastName}
+                        nickname={this.props.spouse.nickname}
+                        male={!this.props.male}
+                    />
+                }
             </div>
         );
     }

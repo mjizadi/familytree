@@ -3,4 +3,9 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+
+    border-radius: 2px;
+    margin: 5px;
+    padding: 5px;
+    border: lightblue 1px solid;
 }

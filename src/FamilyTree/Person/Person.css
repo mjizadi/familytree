@@ -1,3 +1,10 @@
-.Person {
-    order: 0;
+.coupleBox {
+    width: 200px;
+
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-flow: column nowrap;
 }

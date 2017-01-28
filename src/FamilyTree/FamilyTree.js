@@ -12,6 +12,7 @@ class FamilyTree extends Component {
                 <Person
                     firstName={this.props.tree.firstName}
                     lastName={this.props.tree.lastName}
+                    nickname={this.props.tree.nickname}
                     male={this.props.tree.male}
                     spouse={this.props.tree.spouse}
                 />
