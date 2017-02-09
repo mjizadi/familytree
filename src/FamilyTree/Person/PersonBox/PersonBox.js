@@ -1,40 +1,40 @@
 import React, {Component} from 'react';
 import FontAwesome from 'react-fontawesome';
+import {nonDescendantLine, descendantLine, personBox, personCard, hasMargin} from "../../styles";
 
-let persons = 0;
 class PersonBox extends Component {
-    constructor(props) {
-        super(props);
-        this.getFormattedName = this.getFormattedName.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.getFormattedName = this.getFormattedName.bind(this);
+  }
 
-    render() {
-        return (
-            <div className="personBox">
-                <FontAwesome
-                    name={this.props.male ? "male" : "female"}
-                />
-                {' ' + this.getFormattedName()}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div style={personBox}>
+        <div style={this.props.isDescendant ? descendantLine : nonDescendantLine}></div>
+        <div style={personCard}>
+          <FontAwesome style={hasMargin} name={this.props.male ? "male" : "female"}/>
+          <span style={hasMargin}>{' ' + this.getFormattedName()}</span>
+        </div>
+      </div>
+    );
+  }
 
-    getFormattedName() {
-        console.log(++persons);
-        if (this.props.nickname !== undefined) {
-            return this.props.nickname;
-        }
-        if (this.props.firstName === undefined && this.props.lastName === undefined) {
-            return "";
-        }
-        if (this.props.firstName === undefined) {
-            return this.props.lastName;
-        }
-        if (this.props.lastName === undefined) {
-            return this.props.firstName;
-        }
-        return this.props.firstName + ' ' + this.props.lastName;
+  getFormattedName() {
+    if (this.props.nickname !== undefined) {
+      return this.props.nickname;
     }
+    if (this.props.firstName === undefined && this.props.lastName === undefined) {
+      return "";
+    }
+    if (this.props.firstName === undefined) {
+      return this.props.lastName;
+    }
+    if (this.props.lastName === undefined) {
+      return this.props.firstName;
+    }
+    return this.props.firstName + ' ' + this.props.lastName;
+  }
 }
 
 export default PersonBox;
