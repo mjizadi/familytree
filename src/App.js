@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import FamilyTree from './FamilyTree';
-import jalal from './jalal.json';
+import tree from './tree.json';
 import {jsonInput} from "./FamilyTree/styles";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {tree: jalal};
+    this.state = {tree: tree};
 
     this.handleTreeChange = this.handleTreeChange.bind(this);
   }

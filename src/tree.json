@@ -1,0 +1,15 @@
+{
+  "firstName": "Bob",
+  "lastName": "Smith",
+  "male": true,
+  "spouse": {
+    "firstName": "Alice"
+  },
+  "children": [
+    {
+      "firstName": "Charles",
+      "male": false
+    }
+  ]
+
+}
