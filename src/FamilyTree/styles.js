@@ -1,12 +1,12 @@
-const lineColor = "peru";
-const personBoxColor = "peru";
-const personCardFillColor = "seagreen";
-const personCardTextColor = "beige";
-const lineThickness = 5;
-const descendantLength = 50;
-const marriageLineLength = 30;
-const personBoxWidth = 200;
-const personBoxHeight = 50;
+export const lineColor = "peru";
+export const personBoxColor = "peru";
+export const personCardFillColor = "seagreen";
+export const personCardTextColor = "beige";
+export const lineThickness = 5;
+export const descendantLength = 50;
+export const marriageLineLength = 30;
+export const personBoxWidth = 200;
+export const personBoxHeight = 50;
 
 export const horizontalLine = {
   width: descendantLength,
@@ -79,7 +79,7 @@ export const personCard = {
 
   borderStyle: "solid",
   borderColor: personBoxColor,
-  borderWidth: 2,
+  borderWidth: 3,
   borderRadius: 5,
 
   backgroundColor: personCardFillColor,
@@ -108,6 +108,7 @@ export const tree = {
 };
 
 export const jsonInput = {
+  marginTop: 100,
   direction: "ltr"
 };
 
