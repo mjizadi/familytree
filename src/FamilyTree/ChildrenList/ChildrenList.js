@@ -3,10 +3,6 @@ import FamilyTree from '../FamilyTree';
 import {hiddenVerticalLine, visibleVerticalLine, verticalSeparator, verticalLineContainer, childrenList} from "../styles";
 
 class ChildrenList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let lastName = this.props.lastName;
     let i = 0;
