@@ -1,6 +1,12 @@
-const lineColor = "blue";
+const lineColor = "peru";
+const personBoxColor = "peru";
+const personCardFillColor = "seagreen";
+const personCardTextColor = "beige";
 const lineThickness = 5;
 const descendantLength = 50;
+const marriageLineLength = 30;
+const personBoxWidth = 200;
+const personBoxHeight = 50;
 
 export const horizontalLine = {
   width: descendantLength,
@@ -12,7 +18,6 @@ export const descendantLine = {
   width: descendantLength,
   height: lineThickness,
   backgroundColor: lineColor
-
 };
 
 export const nonDescendantLine = Object.assign(
@@ -55,28 +60,30 @@ export const childrenList = {
 };
 
 export const personBox = {
-  width: 200,
-  height: 50,
-  maxHeight: 50,
-  overflowY: "hidden",
-
-  maxWidth: 200,
+  width: personBoxWidth,
+  maxWidth: personBoxWidth,
   overflowX: "scroll",
 
-  display: "flex",
-  alignItems: "center"
+  height: personBoxHeight,
+  maxHeight: personBoxHeight,
+  overflowY: "hidden",
 
+  display: "flex",
+  alignItems: "center",
 };
 
 export const personCard = {
-  width: 190,
-  height: 40,
+  width: personBoxWidth - 10,
+  height: personBoxHeight - 10,
   margin: "auto",
 
   borderStyle: "solid",
-  borderColor: "deepskyblue",
-  borderWidth: 1,
+  borderColor: personBoxColor,
+  borderWidth: 2,
   borderRadius: 5,
+
+  backgroundColor: personCardFillColor,
+  color: personCardTextColor,
 
   display: "flex",
   alignItems: "center"
@@ -87,7 +94,7 @@ export const hasMargin = {
 };
 
 export const coupleBox = {
-  width: 200,
+  width: personBoxWidth,
 
   display: "flex",
 
@@ -102,4 +109,45 @@ export const tree = {
 
 export const jsonInput = {
   direction: "ltr"
+};
+
+export const person = {
+  display: "flex",
+  alignItems: "center"
+};
+
+export const marriageLine = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-end"
+};
+
+export const marriageSpouse = {
+  height: lineThickness,
+  width: marriageLineLength,
+  backgroundColor: lineColor
+};
+
+export const marriageConnect = {
+  height: personBoxHeight / 5,
+  width: lineThickness,
+  backgroundColor: lineColor
+};
+
+export const marriageSymbol = {
+  paddingTop: 5,
+  paddingBottom: 5,
+  paddingLeft: 5,
+  marginLeft: "-.75em",
+  color: "gold",
+  fontWeight: "bold"
+};
+
+export const marriageLineContainer = {
+  display: "flex"
+};
+
+export const marriageMargin = {
+  width: 12,
+  backgroundColor: "transparent"
 };

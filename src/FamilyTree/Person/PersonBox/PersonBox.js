@@ -13,7 +13,10 @@ class PersonBox extends Component {
       <div style={personBox}>
         <div style={this.props.isDescendant ? descendantLine : nonDescendantLine}></div>
         <div style={personCard}>
-          <FontAwesome style={hasMargin} name={this.props.male ? "male" : "female"}/>
+          <FontAwesome
+            style={Object.assign({}, hasMargin, {color: this.props.male ? "deepskyblue": "pink"})}
+            name={this.props.male ? "male" : "female"}
+          />
           <span style={hasMargin}>{' ' + this.getFormattedName()}</span>
         </div>
       </div>
